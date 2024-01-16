@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Catalogue - Online Bookstore</title>
+    <style>
+        /* Define your CSS styles here */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        #header {
+            background-color: #007BFF; /* Blue color */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #menu {
+            background-color: #007BFF; /* Blue color */
+            color: #fff;
+            float: left;
+            width: 20%;
+            padding: 20px;
+        }
+
+        #content {
+            float: left;
+            width: 80%;
+            padding: 20px;
+        }
+
+        #footer {
+            clear: both;
+            background-color: #007BFF; /* Blue color */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007BFF; /* Blue color */
+            color: #fff;
+        }
+
+        .book-cover {
+            max-width: 100px;
+            max-height: 150px;
+            border-radius: 5px;
+        }
+
+        .add-to-cart-btn {
+            background-color: #007BFF; /* Blue color */
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .book-entry:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Category Radio Buttons */
+        .category-radio {
+            display: none;
+        }
+
+        .category-label {
+            background-color: #0056b3; /* Darker blue for labels */
+            color: #fff;
+            padding: 5px 10px;
+            display: inline-block;
+            margin-bottom: 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .category-radio:checked+.category-label {
+            background-color: #004080; /* Darker blue when selected */
+        }
+
+        /* Book entries for each category */
+        .CSE .book-entry,
+        .ECE .book-entry,
+        .EEE .book-entry,
+        .CIVIL .book-entry {
+            display: none;
+        }
+
+        .CSE .book-entry.CSE,
+        .ECE .book-entry.ECE,
+        .EEE .book-entry.EEE,
+        .CIVIL .book-entry.CIVIL {
+            display: table-row;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Online Bookstore</h1>
+        <p>Discover a World of Books</p>
+    </div>
+    <div id="menu">
+        <h2>Categories</h2>
+        <input type="radio" class="category-radio" id="cseRadio" name="category" />
+        <label class="category-label" for="cseRadio" onclick="showBooks('CSE')">CSE</label>
+
+        <input type="radio" class="category-radio" id="eceRadio" name="category" />
+        <label class="category-label" for="eceRadio" onclick="showBooks('ECE')">ECE</label>
+
+        <input type="radio" class="category-radio" id="eeeRadio" name="category" />
+        <label class="category-label" for="eeeRadio" onclick="showBooks('EEE')">EEE</label>
+
+        <input type="radio" class="category-radio" id="civilRadio" name="category" />
+        <label class="category-label" for="civilRadio" onclick="showBooks('CIVIL')">CIVIL</label>
+    </div>
+    <div id="content">
+        <h2>Catalogue</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Book Cover</th>
+                    <th>Author Name</th>
+                    <th>Publisher</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- CSE Books -->
+                <tr class="book-entry CSE">
+                    <td><img src="book1.jpg" alt="Book Cover" class="book-cover"></td>
+                    <td>John Doe</td>
+                    <td>ABC Publications</td>
+                    <td>$19.99</td>
+                    <td><button class="add-to-cart-btn">Add to Cart</button></td>
+                </tr>
+                <!-- ECE Books -->
+                <tr class="book-entry ECE">
+                    <td><img src="book2.jpg" alt="Book Cover" class="book-cover"></td>
+                    <td>Jane Smith</td>
+                    <td>XYZ Books</td>
+                    <td>$24.99</td>
+                    <td><button class="add-to-cart-btn">Add to Cart</button></td>
+                </tr>
+                <!-- Add more book entries for other categories -->
+            </tbody>
+        </table>
+    </div>
+    <div id="footer">
+        &copy; 2023 Online Bookstore
+    </div>
+</body>
+
+</html>
