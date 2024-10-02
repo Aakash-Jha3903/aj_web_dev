@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-DO List </title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
     <!--            Web Designing workshop lab
               Created by Aakash Jha (2202900100001)
@@ -24,7 +22,6 @@
             </ul>
         </div>
     </div>
-
     <script>
         const inputBox = document.getElementById("input-box");
         const listContainer = document.getElementById("list-container");
@@ -47,11 +44,9 @@
                     saveData();
                 });
             }
-
             inputBox.value = "";
             saveData();
         }
-
         listContainer.addEventListener("click", function (e) {
             if (e.target.tagName === "LI") {
                 e.target.classList.toggle("checked");
@@ -61,7 +56,6 @@
                 e.target.parentElement.remove();
                 saveData();
             }
-
         }, false)
 
         function saveData() {
@@ -72,7 +66,5 @@
         }
         showTask();
     </script>
-
 </body>
-
 </html>
