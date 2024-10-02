@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyperlinks in HTML</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            width: 60%;
+            max-width: 600px;
+        }
+
+        h1, h2, p { margin-bottom: 10px;    }
+        a {         text-decoration: none;  }
+        a:hover {   text-decoration: underline;  }
+        nav {       margin-bottom: 20px;    }
+        nav a {     margin-right: 10px;     }
+        .section {  padding: 10px 0;        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>   
+     <!--           WEB TECHNOLOGY LAB
+              Created by Aakash Jha (2202900100001)
+    Demonstration of hyperlinks in a webpage by using HTML & CSS --> 
+    <div class="container">
+        <h1>Hyperlink Demonstration</h1>
+        <nav>
+            <a href="secondpage.html">Go to Second Page</a>
+            <a href="#section2">Jump to Section 2</a>
+            <a href="#section3">Jump to Section 3</a>
+        </nav>
+
+        <div class="section" id="section1">
+            <h2>Section 1</h2>
+            <p>This is the first section of the page. Use the links above to 
+                navigate to different sections of this page or to another page.</p>
+        </div>
+
+        <div class="section" id="section2">
+            <h2>Section 2</h2>
+            <p>You've jumped to Section 2 within the same page! 
+                Hyperlinks are useful for quick navigation.</p>
+        </div>
+
+        <div class="section" id="section3">
+            <h2>Section 3</h2>
+            <p>This is the last section on this page. 
+                To go to another page, use the link at the top.</p>
+        </div>
+
+        <div class="footer">
+            <p> &copy; Created by Aakash Jha</p>
+        </div>
+    </div>
+</body>
+</html>
